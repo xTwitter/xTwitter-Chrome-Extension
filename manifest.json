@@ -1,15 +1,23 @@
 {
-  "name": "xTwitter",
-  "version": "0.0.1",
   "manifest_version": 2,
+
+  "name": "xTwitter",
   "description": "xTwitter Description",
-  "homepage_url": "http://extensionizr.com",
+  "version": "0.0.1",
+  "homepage_url": "https://www.twitter.com/",
+
+  "browser_action": {
+    "default_title": "xTwitter",
+    "default_icon": "icons/icon.png",
+    "default_popup": "src/popup/popup.html"
+  },
+
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en",
+  "default_locale": "ko",
   "background": {
     "scripts": [
       "src/bg/background.js"
@@ -17,11 +25,7 @@
     "persistent": false
   },
   "options_page": "src/options_custom/index.html",
-  "page_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "page action demo",
-    "default_popup": "src/page_action/page_action.html"
-  },
+  
   "permissions": [
     "notifications",
     "*://*.twitter.com/*"
